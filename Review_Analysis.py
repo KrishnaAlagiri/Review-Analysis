@@ -1,25 +1,28 @@
 #!/usr/local/bin/python
 import tweepy
-import ConfigParser
+import configparser
 from textblob import TextBlob
 
 #Step 0 - Parsing
-config = ConfigParser.ConfigParser()
+print("Parsing Informations from Setting.conf....")
+config = configparser.ConfigParser()
 config.read('Setting.conf')
-print config.get('DB','DB_DATABASE')
 consumer_key = config.get('TWITTER','CONSUMER_KEY')
 consumer_secret = config.get('TWITTER','CONSUMER_SECRET')
 access_token = config.get('TWITTER','ACCESS_TOKEN')
 access_token_secret = config.get('TWITTER','ACCESS_TOKEN_SECRET')
 
 # Step 1 - Authenticate
+print("Authenticating....")
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
 #Step 2 - Retrieve Tweets
-Product = str(input())
+print("Authenticated :)")
+print()
+Product = str(input("Enter Product Name: "))
 public_tweets = api.search(Product)
 
 
