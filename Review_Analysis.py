@@ -34,10 +34,6 @@ Product = str(input("Enter Product Name: "))
 public_tweets = api.search(Product)
 
 
-#Instead of printing out each tweet, save each Tweet to a CSV file
-#and label each one as either 'positive' or 'negative', depending on the sentiment
-#You can decide the sentiment polarity threshold yourself
-
 
 for tweet in public_tweets:
     print(tweet.text)
