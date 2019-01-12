@@ -1,2 +1,3 @@
 # Config Files
-Setting.conf < sample
+Setting.conf < ignored
+Setting.conf.ini < sample
