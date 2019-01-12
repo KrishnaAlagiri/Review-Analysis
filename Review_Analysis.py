@@ -1,7 +1,11 @@
 #!/usr/local/bin/python
+# Product Review Analysis
+# Created by Krishna Alagiri, https://github.com/KrishnaAlagiri
+
 import tweepy
 import configparser
 from textblob import TextBlob
+
 
 #Step 0 - Parsing
 print("Parsing Informations from Setting.conf....")
