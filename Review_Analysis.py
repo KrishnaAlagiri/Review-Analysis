@@ -31,15 +31,23 @@ api = tweepy.API(auth)
 print("Authenticated :)")
 print()
 Product = str(input("Enter Product Name: "))
-public_tweets = api.search(Product)
+public_tweets = api.search(Product,"en","english",99)
+print("")
 
-
-
+average_polarity=0.00
+num = 0
 for tweet in public_tweets:
     print(tweet.text)
     #Step 3 Perform Sentiment Analysis on Tweets
     analysis = TextBlob(tweet.text)
-    print(analysis.sentiment)
-    print("")
+    if(analysis.sentiment.subjectivity!=0):
+        num = num + 1
+        average_polarity = average_polarity + (analysis.sentiment.subjectivity*analysis.sentiment.polarity)
+        print(analysis.sentiment)
+        print("")
 
+print("")
+average_polarity = average_polarity/num
+print("Average Polarity (-1 -> 1) for ", Product, "is ", average_polarity)
+print("Press any key to exit......")
 msvcrt.getch()
