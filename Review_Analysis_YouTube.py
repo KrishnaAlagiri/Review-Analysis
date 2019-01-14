@@ -46,7 +46,9 @@ def main():
     average_polarity=0.00
     num = 0
     product = "iphone"
-    command = "youtube-dl ytsearch10: \"" + product + " review\"" + " --write-auto-sub --skip-download --sub-lang en --sub-format vtt"
+    command = "youtube-dl ytsearch10:\"" + product + " review\"" + " --write-auto-sub --skip-download --sub-lang en --sub-format vtt"
+    os.system(command)
+    command = "youtube-dl ytsearch10:\"" + product + " review\"" + " --write-sub --skip-download --sub-lang en --sub-format vtt"
     os.system(command)
     files = os.listdir(path)
     print()
