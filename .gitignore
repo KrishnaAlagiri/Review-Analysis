@@ -1,3 +1,6 @@
 # Config Files
 Setting.ini < ignored
 Setting.conf.ini < sample
+
+#Subtitles
+*.vtt
