@@ -11,21 +11,13 @@ A tool that can listen to social media comments (Twitter, Facebook, YouTube etc.
 What things you need to run the program:
 - Python Compiler (3.7 Recommended)
 - Install the following Packages from pypi by using the following commands:
-  - **Tweepy**
+  - **Tweepy, ConfigParser, TextBlob, WebVTT, YouTube_DL**
     ```bash
     pip install tweepy
-    ```
-  - **ConfigParser**
-    ```bash
     pip install configparser
-    ```
-  - **TextBlob**
-    ```bash
     pip install textblob
-    ```
-  - **webvtt**
-    ```bash
     pip install webvtt
+    pip install youtube_dl
     ```
 
 
