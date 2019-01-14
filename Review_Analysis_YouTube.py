@@ -23,6 +23,7 @@ def vtt2text(file):
 
     return transcript
 
+
 def start():
         path = os.getcwd() + "\\.ReviewAnal"
         shutil.rmtree(path, ignore_errors=True)
