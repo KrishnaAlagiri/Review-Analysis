@@ -1,5 +1,5 @@
 #!/usr/local/bin/python
-# Product Review Analysis
+# Product Review Analysis using Twitter
 # Created by Krishna Alagiri, https://github.com/KrishnaAlagiri
 
 import tweepy, msvcrt, configparser
