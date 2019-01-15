@@ -16,7 +16,7 @@ What things you need to run the program:
     pip install tweepy
     pip install configparser
     pip install textblob
-    pip install webvtt
+    pip install webvtt-py
     pip install youtube_dl
     ```
 
